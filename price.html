@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed-variant": "#872000",
+                        "on-error-container": "#ffdad6",
+                        "inverse-surface": "#e2e2e2",
+                        "secondary-container": "#872101",
+                        "outline": "#ad887e",
+                        "secondary-fixed-dim": "#ffb5a0",
+                        "primary": "#ffb5a0",
+                        "tertiary": "#a5c8ff",
+                        "on-tertiary-container": "#002a53",
+                        "primary-fixed": "#ffdbd1",
+                        "on-tertiary": "#00315e",
+                        "error": "#ffb4ab",
+                        "secondary": "#ffb5a0",
+                        "on-surface-variant": "#e7bdb2",
+                        "inverse-primary": "#b12d00",
+                        "error-container": "#93000a",
+                        "surface-variant": "#353535",
+                        "on-secondary-container": "#ff9b7f",
+                        "tertiary-container": "#ff5625",
+                        "on-secondary": "#601400",
+                        "on-error": "#690005",
+                        "surface-container-high": "#2a2a2a",
+                        "primary-container": "#ff5625",
+                        "on-primary": "#601400",
+                        "surface-container-highest": "#353535",
+                        "primary-fixed-dim": "#ffb5a0",
+                        "on-tertiary-fixed": "#001c3a",
+                        "tertiary-fixed": "#d4e3ff",
+                        "on-background": "#e2e2e2",
+                        "surface-container-lowest": "#0e0e0e",
+                        "background": "#131313",
+                        "surface-dim": "#131313",
+                        "surface-bright": "#393939",
+                        "surface-container-low": "#1b1b1b",
+                        "surface-container": "#1f1f1f",
+                        "on-secondary-fixed": "#3b0900",
+                        "on-primary-container": "#541100",
+                        "outline-variant": "#5d4038",
+                        "secondary-fixed": "#ffdbd1",
+                        "inverse-on-surface": "#303030",
+                        "surface-tint": "#ffb5a0",
+                        "surface": "#131313",
+                        "on-secondary-fixed-variant": "#872101",
+                        "on-tertiary-fixed-variant": "#004785",
+                        "tertiary-fixed-dim": "#a5c8ff",
+                        "on-primary-fixed": "#3b0900",
+                        "on-surface": "#e2e2e2"
+                    },
+                    fontFamily: {
+                        "headline": ["Lexend"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .kinetic-gradient {
+            background: linear-gradient(135deg, #ffb5a0 0%, #ff5625 100%);
+        }
+
+        .glass-nav {
+            background: rgba(42, 42, 42, 0.6);
+            backdrop-filter: blur(20px);
+        }
+
+        .text-stroke {
+            -webkit-text-stroke: 1px #e2e2e2;
+            color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 w-full z-50 glass-nav border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-12">
+                <a class="font-headline text-2xl font-black tracking-tighter text-on-surface"
+                    href="{{DATA:SCREEN:SCREEN_4}}">HealthFreakGym</a>
+                <div class="hidden md:flex gap-8 items-center">
+                    <a class="font-label text-sm font-medium hover:text-primary transition-colors"
+                        href="{{DATA:SCREEN:SCREEN_4}}#about">About</a>
+                    <a class="font-label text-sm font-medium hover:text-primary transition-colors"
+                        href="{{DATA:SCREEN:SCREEN_4}}#services">Services</a>
+                    <a class="font-label text-sm font-medium hover:text-primary transition-colors"
+                        href="{{DATA:SCREEN:SCREEN_2}}">Pricing</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <a class="bg-primary-container text-on-primary-container font-headline font-bold px-6 py-2 rounded-lg text-sm hover:scale-[0.98] transition-transform inline-block"
+                    href="{{DATA:SCREEN:CONTACT_PAGE}}contact.html">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-32 pb-24 overflow-hidden">
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-6 mb-24 relative">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+                <div class="lg:col-span-8">
+                    <span
+                        class="inline-block bg-primary-container/10 text-primary font-label text-xs font-black tracking-widest uppercase mb-4 px-3 py-1">Investment
+                        Plans</span>
+                    <h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter leading-[0.9] mb-8">
+                        CHOOSE YOUR <br /> <span class="text-primary">INTENSITY</span>
+                    </h1>
+                    <p class="font-body text-xl text-on-surface-variant max-w-xl leading-relaxed">
+                        High-performance tiers engineered for elite results. No fluff, no fillers. Just the tools you
+                        need to break your limits.
+                    </p>
+                </div>
+                <div class="lg:col-span-4 flex justify-end">
+                    <div
+                        class="relative w-48 h-48 bg-surface-container-highest rounded-full flex items-center justify-center p-4 border border-outline-variant/20">
+                        <div class="absolute inset-0 kinetic-gradient opacity-10 blur-2xl rounded-full"></div>
+                        <div class="text-center">
+                            <span class="block font-headline text-4xl font-bold leading-none">100%</span>
+                            <span class="block font-label text-[10px] uppercase tracking-widest opacity-60">Focus
+                                Rate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Decorative Bleed Image -->
+            <div class="absolute -right-24 top-0 -z-10 opacity-20 hidden xl:block">
+                <img alt="Fitness Athlete" class="w-[600px] h-[800px] object-cover"
+                    data-alt="Monochrome close up of a weightlifter training"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmk2-JLAcY8vF4ZYGRcw77K52Jb8O_vwA9yMPIGn0tL6GtZHffs4ixaE4juTSK041_rN0kJ2F1TRV3G2_j3-nThXHVPLx7G3BBOdwjgHmGvqfKqqnM6fkDL9DBgy1D9kOnWiIpzF-JHpAPhCC0B51CX8yR-9BDZzycixmhm7w8I4yJU51YfaqIiY0znSdnOkPYXGUehwQzxlvLo9JwILPg9knh5NgsAz-AF9vJ5da0hh0hlNpYLptEY3gbWnsPgi69mjec-az3pg" />
+            </div>
+        </section>
+        <!-- Pricing Grid -->
+        <section class="max-w-7xl mx-auto px-6" id="pricing">
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-0 bg-surface-container-low overflow-hidden rounded-xl border border-white/5">
+                <!-- Basic Plan -->
+                <div
+                    class="flex flex-col p-10 md:border-r border-white/5 hover:bg-surface-container transition-colors duration-300">
+                    <div class="mb-12">
+                        <h3 class="font-headline text-3xl font-bold mb-4">Basic Plan</h3>
+                        <div class="flex items-baseline gap-1">
+                            <span class="font-headline text-4xl font-black text-primary">4999</span>
+                            <span class="font-label text-sm text-on-surface-variant">/m</span>
+                        </div>
+                    </div>
+                    <div class="flex-grow space-y-8 mb-12">
+                        <p class="font-body text-on-surface-variant leading-relaxed">
+                            Access to all high-end gym equipment. The essential toolkit for self-driven performers.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                <span class="text-sm font-medium">24/7 Floor Access</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                <span class="text-sm font-medium">Locker Room &amp; Steam</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                <span class="text-sm font-medium">Free Wi-Fi</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button
+                        class="w-full py-4 border border-outline/20 font-headline font-bold uppercase tracking-widest text-xs hover:bg-white/5 transition-colors">Select
+                        Basic</button>
+                </div>
+                <!-- Advance Plan (ELITE) -->
+                <div
+                    class="relative flex flex-col p-10 bg-surface-container-high scale-105 z-10 shadow-2xl overflow-hidden">
+                    <div class="absolute top-0 right-0">
+                        <div
+                            class="bg-primary text-on-primary font-headline text-[10px] font-black px-4 py-1 rotate-45 translate-x-4 translate-y-2 uppercase tracking-tighter">
+                            Elite Choice</div>
+                    </div>
+                    <div class="mb-12">
+                        <h3 class="font-headline text-3xl font-bold mb-4 text-primary">Advance Plan</h3>
+                        <div class="flex items-baseline gap-1">
+                            <span class="font-headline text-5xl font-black text-on-surface">9999</span>
+                            <span class="font-label text-sm text-on-surface-variant">/m</span>
+                        </div>
+                    </div>
+                    <div class="flex-grow space-y-8 mb-12">
+                        <p class="font-body text-on-surface leading-relaxed">
+                            Basic plan features + dedicated personal trainer + customized diet chart. Designed for
+                            maximum velocity.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl"
+                                    style="font-variation-settings: 'FILL' 1;">stars</span>
+                                <span class="text-sm font-bold">1-on-1 Dedicated Trainer</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl"
+                                    style="font-variation-settings: 'FILL' 1;">nutrition</span>
+                                <span class="text-sm font-bold">Bio-Specific Diet Mapping</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary text-xl"
+                                    style="font-variation-settings: 'FILL' 1;">monitoring</span>
+                                <span class="text-sm font-bold">Monthly Body Analytics</span>
+                            </li>
+                            <li class="flex items-center gap-3 opacity-60">
+                                <span class="material-symbols-outlined text-primary text-xl"
+                                    style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                <span class="text-sm font-medium">All Basic Features</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <button
+                        class="w-full py-4 kinetic-gradient text-on-primary-container font-headline font-black uppercase tracking-widest text-sm hover:scale-[0.98] transition-transform shadow-lg shadow-primary/10">Get
+                        Elite Access</button>
+                </div>
+                <!-- Custom Plan -->
+                <div
+                    class="flex flex-col p-10 md:border-l border-white/5 hover:bg-surface-container transition-colors duration-300">
+                    <div class="mb-12">
+                        <h3 class="font-headline text-3xl font-bold mb-4">Custom</h3>
+                        <div class="flex items-baseline gap-1">
+                            <span class="font-headline text-4xl font-black">Flexible</span>
+                        </div>
+                    </div>
+                    <div class="flex-grow space-y-8 mb-12">
+                        <p class="font-body text-on-surface-variant leading-relaxed">
+                            Pricing depends on the specific combination of services you choose. Build your own
+                            performance stack.
+                        </p>
+                        <div class="p-4 bg-surface-container-low rounded border border-white/5">
+                            <span
+                                class="block text-[10px] font-label uppercase tracking-widest opacity-40 mb-2">Available
+                                Modules</span>
+                            <div class="flex flex-wrap gap-2">
+                                <span
+                                    class="text-[10px] font-label border border-outline/20 px-2 py-1 rounded">Yoga</span>
+                                <span
+                                    class="text-[10px] font-label border border-outline/20 px-2 py-1 rounded">Physio</span>
+                                <span
+                                    class="text-[10px] font-label border border-outline/20 px-2 py-1 rounded">MMA</span>
+                                <span
+                                    class="text-[10px] font-label border border-outline/20 px-2 py-1 rounded">Pool</span>
+                                <span
+                                    class="text-[10px] font-label border border-outline/20 px-2 py-1 rounded">Sauna</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="w-full py-4 border border-white font-headline font-bold uppercase tracking-widest text-xs hover:bg-white hover:text-background transition-colors text-center"
+                        href="{{DATA:SCREEN:CONTACT_PAGE}}">Contact Us</a>
+                </div>
+            </div>
+        </section>
+        <!-- Feature Bento -->
+        <section class="max-w-7xl mx-auto px-6 mt-32">
+            <h2 class="font-headline text-4xl font-black mb-12 text-stroke uppercase tracking-widest">Global Facilities
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[600px]">
+                <div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl">
+                    <img alt="Equipment"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                        data-alt="Modern high end gym equipment aesthetic layout"
+                        src="https://images.pexels.com/photos/6739958/pexels-photo-6739958.jpeg" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <span class="font-headline text-2xl font-bold">Hammer Strength Elite</span>
+                        <p class="font-label text-xs opacity-60 tracking-widest uppercase">Precision Tools</p>
+                    </div>
+                </div>
+                <div class="md:col-span-2 relative group overflow-hidden rounded-xl">
+                    <img alt="Zone"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                        data-alt="Vibrant orange neon lit workout zone"
+                        src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80"></div>
+                    <div class="absolute bottom-6 left-6">
+                        <span class="font-headline text-2xl font-bold">Cardio Lab</span>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl">
+                    <div class="absolute inset-0 kinetic-gradient p-6 flex flex-col justify-between">
+                        <span class="material-symbols-outlined text-4xl"
+                            style="font-variation-settings: 'FILL' 1;">bolt</span>
+                        <span class="font-headline text-lg font-black leading-tight">HYPER<br />RECOVERY</span>
+                    </div>
+                </div>
+                <div
+                    class="relative group overflow-hidden rounded-xl bg-surface-container-highest flex items-center justify-center">
+                    <span class="text-stroke font-headline text-6xl font-black">24/7</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container-lowest py-20 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <span class="font-headline text-3xl font-black mb-6 block">HealthFreakGym</span>
+                    <p class="font-body text-on-surface-variant max-w-sm mb-8">
+                        The kinetic editorial of fitness. We don't just host workouts; we engineer performance.
+                    </p>
+                    <div class="flex gap-6">
+                        <a class="font-label text-xs uppercase tracking-widest hover:text-primary transition-colors"
+                            href="#">Instagram</a>
+                        <a class="font-label text-xs uppercase tracking-widest hover:text-primary transition-colors"
+                            href="#">Facebook</a>
+                        <a class="font-label text-xs uppercase tracking-widest hover:text-primary transition-colors"
+                            href="#">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="md:text-right flex flex-col justify-between items-end">
+                    <div class="space-y-2">
+                        <h4 class="font-headline text-lg font-bold">Elite Fitness City</h4>
+                        <p class="font-body text-sm text-on-surface-variant">123 Performance Way, EF 90210</p>
+                    </div>
+                    <div class="mt-8">
+                        <span class="font-label text-xs text-on-surface-variant opacity-40">© 2024 HealthFreakGym. 123
+                            Performance Way, Elite Fitness City.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary-fixed": "#ffdbd1",
+            "on-secondary-container": "#ff9b7f",
+            "surface-container-highest": "#353535",
+            "surface-container-lowest": "#0e0e0e",
+            "inverse-primary": "#b12d00",
+            "inverse-on-surface": "#303030",
+            "outline-variant": "#5d4038",
+            "secondary": "#ffb5a0",
+            "on-secondary-fixed-variant": "#872101",
+            "on-primary-container": "#fcf2e1",
+            "on-error": "#690005",
+            "primary-fixed-dim": "#ffb5a0",
+            "error": "#ffb4ab",
+            "error-container": "#93000a",
+            "tertiary": "#a5c8ff",
+            "background": "#131313",
+            "inverse-surface": "#e2e2e2",
+            "surface-bright": "#393939",
+            "surface-variant": "#353535",
+            "on-tertiary-fixed-variant": "#004785",
+            "tertiary-fixed-dim": "#a5c8ff",
+            "surface-container-high": "#2a2a2a",
+            "primary-container": "#ff5625",
+            "on-secondary-fixed": "#3b0900",
+            "secondary-fixed": "#ffdbd1",
+            "on-tertiary": "#00315e",
+            "on-primary-fixed": "#3b0900",
+            "surface": "#131313",
+            "on-surface": "#e2e2e2",
+            "on-primary": "#601400",
+            "tertiary-fixed": "#d4e3ff",
+            "on-surface-variant": "#e7bdb2",
+            "on-primary-fixed-variant": "#872000",
+            "secondary-fixed-dim": "#ffb5a0",
+            "surface-container": "#1f1f1f",
+            "on-background": "#e2e2e2",
+            "surface-tint": "#ffb5a0",
+            "tertiary-container": "#2592ff",
+            "primary": "#ffb5a0",
+            "surface-container-low": "#1b1b1b",
+            "on-tertiary-fixed": "#001c3a",
+            "secondary-container": "#872101",
+            "on-secondary": "#601400",
+            "on-error-container": "#ffdad6",
+            "outline": "#ad887e",
+            "surface-dim": "#131313",
+            "on-tertiary-container": "#002a53"
+          },
+          fontFamily: {
+            "headline": ["Lexend"],
+            "body": ["Inter"],
+            "label": ["Inter"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #131313;
+      color: #e2e2e2;
+    }
+
+    .lexend {
+      font-family: 'Lexend', sans-serif;
+    }
+
+    .kinetic-gradient {
+      background: linear-gradient(135deg, #ffb5a0 0%, #ff5625 100%);
+    }
+
+    .glass-nav {
+      background: rgba(31, 31, 31, 0.6);
+      backdrop-filter: blur(20px);
+    }
+
+    .asymmetric-bleed {
+      margin-right: -10vw;
+    }
+  </style>
+</head>
+
+<body class="bg-surface selection:bg-primary-container selection:text-on-primary-container">
+  <!-- TopNavBar -->
+  <nav class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/10">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a class="lexend text-2xl font-black tracking-tighter text-on-surface" href="#">HealthFreakGym</a>
+      <div class="hidden md:flex items-center gap-10">
+        <a class="font-body text-sm font-medium hover:text-primary transition-colors" href="#about">About</a>
+        <a class="font-body text-sm font-medium hover:text-primary transition-colors" href="#services">Services</a>
+        <a class="font-body text-sm font-medium hover:text-primary transition-colors" href="price.html">Pricing</a>
+      </div>
+      <a class="bg-on-surface text-surface px-6 py-2.5 rounded-lg font-headline font-bold text-sm tracking-tight hover:bg-primary-container transition-all active:scale-95 inline-block"
+        href="contact.html">
+        Contact Us
+      </a>
+    </div>
+  </nav>
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="relative min-h-[90vh] flex items-center overflow-hidden px-6 lg:px-24">
+      <div class="grid lg:grid-cols-2 gap-12 items-center w-full max-w-7xl mx-auto">
+        <div class="z-10">
+          <h1 class="lexend text-6xl md:text-7.5xl font-black leading-[0.9] tracking-tighter text-on-surface mb-8">
+            FUEL YOUR PASSION,<br />
+            <span class="text-primary-container">FORGE YOUR BODY</span>
+          </h1>
+          <p class="font-body text-on-surface-variant max-w-md text-lg mb-10 leading-relaxed">
+            The elite destination for high-performance training. No excuses, just results in a space designed for the
+            relentless.
+          </p>
+          <div class="flex gap-4">
+            <button
+              class="kinetic-gradient text-on-primary-container px-8 py-4 rounded-lg font-headline font-extrabold tracking-tight">START
+              TRAINING</button>
+            <a class="border border-outline-variant/30 px-8 py-4 rounded-lg font-headline font-extrabold tracking-tight hover:bg-surface-container-high inline-block"
+              href="price.html">VIEW PLANS</a>
+          </div>
+        </div>
+        <div class="relative flex justify-center items-center h-[600px]">
+          <div
+            class="absolute w-100 h-96 bg-surface-container-highest rounded-xl rotate-[-12deg] -translate-x-12 z-0 overflow-hidden">
+            <img alt="Hero 1" class="w-full h-full object-cover grayscale contrast-125 opacity-80"
+              data-alt="Intense bodybuilder lifting heavy weights in gym"
+              src="https://images.pexels.com/photos/791763/pexels-photo-791763.jpeg" />
+          </div>
+          <div
+            class="absolute w-100 h-96 bg-primary-container rounded-xl rotate-[8deg] translate-x-12 z-10 overflow-hidden border-4 border-surface shadow-2xl">
+            <img alt="Hero 2" class="w-full h-full object-cover"
+              data-alt="Woman doing functional training exercise in modern gym"
+              src="https://images.pexels.com/photos/416717/pexels-photo-416717.jpeg" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section class="py-32 bg-surface-container-low" id="about">
+      <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 items-center gap-12">
+        <div class="hidden md:block col-span-1 space-y-6">
+          <div class="h-48 rounded-xl overflow-hidden bg-surface-container-high rotate-3">
+            <img alt="History 1" class="w-full h-full object-cover opacity-60"
+              data-alt="Vintage gym equipment black and white"
+              src="https://images.pexels.com/photos/2261485/pexels-photo-2261485.jpeg" />
+          </div>
+          <div class="h-32 rounded-xl overflow-hidden bg-primary-container -rotate-6">
+            <img alt="History 2" class="w-full h-full object-cover" data-alt="Trainer helping a client"
+              src="https://images.pexels.com/photos/4325442/pexels-photo-4325442.jpeg" />
+          </div>
+        </div>
+        <div class="col-span-1 md:col-span-3 text-center px-4">
+          <span class="lexend text-primary-container font-extrabold tracking-[0.3em] text-sm uppercase mb-6 block">Our
+            Legacy</span>
+          <h2 class="lexend text-4xl md:text-5xl font-black text-on-surface mb-8 leading-tight">BORN FROM GRIT, DRIVEN
+            BY RESULTS</h2>
+          <p class="font-body text-on-surface-variant text-lg leading-relaxed max-w-2xl mx-auto">
+            Founded in 2010, HealthFreakGym started in a garage with one mission: to build athletes who never settle. We
+            believe fitness is not a hobby, it's a lifestyle of absolute discipline. Our state-of-the-art facility is
+            the crucible where transformation happens daily.
+          </p>
+        </div>
+        <div class="hidden md:block col-span-1 space-y-6">
+          <div class="h-32 rounded-xl overflow-hidden bg-surface-container-high -rotate-2">
+            <img alt="Mission 1" class="w-full h-full object-cover opacity-60" data-alt="Modern gym interior wide shot"
+              src="https://images.pexels.com/photos/4164772/pexels-photo-4164772.jpeg" />
+          </div>
+          <div class="h-48 rounded-xl overflow-hidden bg-primary-container rotate-12">
+            <img alt="Mission 2" class="w-full h-full object-cover" data-alt="Athlete sprinting on track"
+              src="https://images.pexels.com/photos/4164756/pexels-photo-4164756.jpeg" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section (Scroll Kinetic Layout) -->
+    <section class="py-32 px-6 overflow-hidden" id="services">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex justify-between items-end mb-20">
+          <div>
+            <span
+              class="lexend text-primary-container font-extrabold tracking-[0.3em] text-sm uppercase block mb-4">What we
+              do</span>
+            <h2 class="lexend text-5xl md:text-7xl font-black text-on-surface tracking-tighter">ELITE SERVICES</h2>
+          </div>
+          <p class="hidden md:block font-body text-on-surface-variant max-w-xs text-right">Engineering peak human
+            performance through specialized modalities.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Muscle Training -->
+          <div
+            class="group relative bg-surface-container-low p-8 rounded-lg border-b-4 border-transparent hover:border-primary-container transition-all duration-300 transform hover:-translate-y-2">
+            <div class="mb-6"><span class="material-symbols-outlined text-primary-container text-4xl"
+                style="font-variation-settings: 'FILL' 1;">fitness_center</span></div>
+            <h3 class="lexend text-2xl font-bold mb-4 text-on-surface">Muscle Training</h3>
+            <p class="font-body text-on-surface-variant mb-6 text-sm">Hypertrophy-focused programming designed to build
+              raw power and aesthetic density.</p>
+            <div class="p-4 bg-surface-container-high rounded border-l-2 border-primary-container">
+              <span class="text-xs font-bold text-primary tracking-widest uppercase">Why us?</span>
+              <p class="text-xs mt-1 italic">Pro-level equipment and science-backed progressive overload trackers.</p>
+            </div>
+          </div>
+          <!-- Weight Loss -->
+          <div
+            class="group relative bg-surface-container-low p-8 rounded-lg border-b-4 border-transparent hover:border-primary-container transition-all duration-300 transform hover:translate-y-4">
+            <div class="mb-6"><span class="material-symbols-outlined text-primary-container text-4xl"
+                style="font-variation-settings: 'FILL' 1;">bolt</span></div>
+            <h3 class="lexend text-2xl font-bold mb-4 text-on-surface">Weight Loss</h3>
+            <p class="font-body text-on-surface-variant mb-6 text-sm">Metabolic conditioning that turns your body into a
+              24/7 fat-burning furnace.</p>
+            <div class="p-4 bg-surface-container-high rounded border-l-2 border-primary-container">
+              <span class="text-xs font-bold text-primary tracking-widest uppercase">Why us?</span>
+              <p class="text-xs mt-1 italic">Personalized nutrition mapping integrated with every workout plan.</p>
+            </div>
+          </div>
+          <!-- Yoga -->
+          <div
+            class="group relative bg-surface-container-low p-8 rounded-lg border-b-4 border-transparent hover:border-tertiary transition-all duration-300 transform hover:-translate-y-2">
+            <div class="mb-6"><span class="material-symbols-outlined text-tertiary text-4xl"
+                style="font-variation-settings: 'FILL' 1;">self_improvement</span></div>
+            <h3 class="lexend text-2xl font-bold mb-4 text-on-surface">Yoga</h3>
+            <p class="font-body text-on-surface-variant mb-6 text-sm">Athletic flow for recovery, mobility, and
+              razor-sharp mental focus.</p>
+            <div class="p-4 bg-surface-container-high rounded border-l-2 border-tertiary">
+              <span class="text-xs font-bold text-tertiary tracking-widest uppercase">Why us?</span>
+              <p class="text-xs mt-1 italic">Focus on functional mobility tailored for heavy lifters and athletes.</p>
+            </div>
+          </div>
+          <!-- Physiotherapy -->
+          <div
+            class="group relative bg-surface-container-low p-8 rounded-lg border-b-4 border-transparent hover:border-primary-container transition-all duration-300 transform hover:translate-y-6">
+            <div class="mb-6"><span class="material-symbols-outlined text-primary-container text-4xl"
+                style="font-variation-settings: 'FILL' 1;">medical_services</span></div>
+            <h3 class="lexend text-2xl font-bold mb-4 text-on-surface">Physiotherapy</h3>
+            <p class="font-body text-on-surface-variant mb-6 text-sm">Clinical rehabilitation to eliminate pain and
+              restore perfect movement patterns.</p>
+            <div class="p-4 bg-surface-container-high rounded border-l-2 border-primary-container">
+              <span class="text-xs font-bold text-primary tracking-widest uppercase">Why us?</span>
+              <p class="text-xs mt-1 italic">In-house doctors who specialize in sports-specific injury prevention.</p>
+            </div>
+          </div>
+          <!-- Dance -->
+          <div
+            class="group relative bg-surface-container-low p-8 rounded-lg border-b-4 border-transparent hover:border-primary-container transition-all duration-300 transform hover:-translate-y-4">
+            <div class="mb-6"><span class="material-symbols-outlined text-primary-container text-4xl"
+                style="font-variation-settings: 'FILL' 1;">music_note</span></div>
+            <h3 class="lexend text-2xl font-bold mb-4 text-on-surface">Dance</h3>
+            <p class="font-body text-on-surface-variant mb-6 text-sm">High-energy rhythmic cardio to boost coordination
+              and cardiovascular endurance.</p>
+            <div class="p-4 bg-surface-container-high rounded border-l-2 border-primary-container">
+              <span class="text-xs font-bold text-primary tracking-widest uppercase">Why us?</span>
+              <p class="text-xs mt-1 italic">Professional choreographers who keep the intensity at peak level.</p>
+            </div>
+          </div>
+          <!-- Medical Massage Therapy -->
+          <div
+            class="group relative bg-surface-container-low p-8 rounded-lg border-b-4 border-transparent hover:border-primary-container transition-all duration-300 transform hover:translate-y-2">
+            <div class="mb-6"><span class="material-symbols-outlined text-primary-container text-4xl"
+                style="font-variation-settings: 'FILL' 1;">spa</span></div>
+            <h3 class="lexend text-2xl font-bold mb-4 text-on-surface">Medical Massage Therapy</h3>
+            <p class="font-body text-on-surface-variant mb-6 text-sm">Deep tissue recovery protocols to flush toxins and
+              accelerate muscle repair.</p>
+            <div class="p-4 bg-surface-container-high rounded border-l-2 border-primary-container">
+              <span class="text-xs font-bold text-primary tracking-widest uppercase">Why us?</span>
+              <p class="text-xs mt-1 italic">Focused on trigger point therapy specifically for athletic recovery.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-24 px-6">
+      <div class="max-w-5xl mx-auto kinetic-gradient p-12 md:p-20 rounded-xl relative overflow-hidden">
+        <div class="relative z-10 text-center">
+          <h2 class="lexend text-4xl md:text-6xl font-black text-on-primary-container mb-6 tracking-tighter">READY TO
+            TRANSCEND?</h2>
+          <p class="font-body text-on-primary-container/80 text-lg mb-10 font-medium">Join the freak movement today.
+            Exclusive memberships available.</p>
+          <a class="bg-on-primary-container text-surface px-12 py-5 rounded-lg font-headline font-black text-lg tracking-tight hover:scale-105 transition-transform inline-block"
+            href="contact.html">JOIN NOW</a>
+        </div>
+        <div class="absolute -bottom-10 -right-10 opacity-20">
+          <span class="material-symbols-outlined text-[300px]"
+            style="font-variation-settings: 'FILL' 1;">exercise</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-surface-container-lowest pt-20 pb-10 border-t border-outline-variant/10 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
+        <div class="max-w-xs">
+          <h4 class="lexend text-primary font-bold mb-4 uppercase text-xs tracking-[0.2em]">Gym Address</h4>
+          <p class="font-body font-bold text-on-surface text-xl leading-snug">
+            122 Powerhouse Way, Iron District, New York, NY 10001
+          </p>
+          <div class="mt-6">
+            <span class="material-symbols-outlined text-primary-container"
+              style="font-variation-settings: 'FILL' 1;">location_on</span>
+          </div>
+        </div>
+        <div class="lexend text-4xl md:text-6xl font-black tracking-tighter text-on-surface/20">
+          HealthFreakGym
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-outline-variant/5">
+        <p class="font-body text-xs text-on-surface-variant/50 order-2 md:order-1">© 2024 HealthFreakGym. All rights
+          reserved.</p>
+        <div class="flex gap-8 mb-6 md:mb-0 order-1 md:order-2">
+          <a class="font-headline font-bold text-sm tracking-widest hover:text-primary transition-colors"
+            href="#">Instagram</a>
+          <a class="font-headline font-bold text-sm tracking-widest hover:text-primary transition-colors"
+            href="#">YouTube</a>
+          <a class="font-headline font-bold text-sm tracking-widest hover:text-primary transition-colors" href="#">X</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
